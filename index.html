@@ -24,8 +24,8 @@
             var map = L.map(document.body).setView([54.04, 26.27], 5);
 			var baseMaps = {
 				"R-Map": L.tileLayer('//tilessputnik.ru/{z}/{x}/{y}.png'),
-				'Уклоны': L.tileLayer.Mercator('//btilecart.kosmosnimki.ru/ds/{z}/{x}/{y}', {minNativeZoom:9, maxNativeZoom:13}),
-				'Экспозиция': L.tileLayer.Mercator('//btilecart.kosmosnimki.ru/da/{z}/{x}/{y}', {minNativeZoom:9, maxNativeZoom:13}),
+				'Уклоны': L.tileLayer.Mercator('//{s}tilecart.kosmosnimki.ru/ds/{z}/{x}/{y}.png', {minZoom:9, minNativeZoom:9, maxNativeZoom:13}),
+				'Экспозиция': L.tileLayer.Mercator('//{s}tilecart.kosmosnimki.ru/da/{z}/{x}/{y}.png', {minNativeZoom:9, maxNativeZoom:13}),
 				'Яндекс-спутник': L.tileLayer.Mercator('//sat01.maps.yandex.net/tiles?l=sat&v=3.341.0&x={x}&y={y}&z={z}&lang=ru_RU'),
 				'Яндекс-карта': L.tileLayer.Mercator('//vec03.maps.yandex.net/tiles?l=map&v=17.09.21-1&x={x}&y={y}&z={z}&scale=1&lang=ru_RU')
 			};
