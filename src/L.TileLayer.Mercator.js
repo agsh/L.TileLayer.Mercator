@@ -5,16 +5,15 @@
 		},
 		_getTiledPixelBounds: function (center) {
 			var pixelBounds = L.TileLayer.prototype._getTiledPixelBounds.call(this, center);
-			var shiftY = this._getShiftY(this._tileZoom);
-			pixelBounds.min.y += shiftY;
-			pixelBounds.max.y += shiftY;
+			this._shiftY = this._getShiftY(this._tileZoom);
+			pixelBounds.min.y += this._shiftY;
+			pixelBounds.max.y += this._shiftY;
 			return pixelBounds;
 		},
 
 		_getTilePos: function (coords) {
 			var tilePos = L.TileLayer.prototype._getTilePos.call(this, coords);
-			var shiftY = this._getShiftY(this._tileZoom);
-			return tilePos.subtract([0, shiftY]);
+			return tilePos.subtract([0, this._shiftY]);
 		},
 
 		_getShiftY: function(zoom) {
