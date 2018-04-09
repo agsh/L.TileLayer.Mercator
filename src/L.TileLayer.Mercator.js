@@ -25,7 +25,7 @@
 		}
 	});
 	L.TileLayer.Mercator = Mercator;
-	L.tileLayer.Mercator = function (options) {
-		return new Mercator(options);
+	L.tileLayer.Mercator = function (url, options) {
+		return new Mercator(url, options);
 	};
 })();
